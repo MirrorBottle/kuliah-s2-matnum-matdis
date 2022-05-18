@@ -1,40 +1,71 @@
-#input hasil
-k=int(input('Input k : '))
-n=int(input('Input n : '))
+#faktorial 
+print('============================')
+print('Program Menghitung Permutasi')
+print('============================')
+n = int(input('Masukkan jumlah semua buku : '))
 
-#perhitungan permutasi
-list1=[]
-i=0
-if k==0:
-    list1.append(1)
-elif k!=0:
-    while True:
-        hasilpermutasi=(n-i)
-        list1.append(hasilpermutasi)
-        i+=1
-        if((n-i)+k)==n:
-            break
+def hitung_faktorial (n):
+  if n > 2:
+    return n * hitung_faktorial(n - 1)
 
-#perhitungan kombinasi
-list2=[]
-j=0
-if k==0:
-    list1.append(1)
-elif k!=0:
-    while True:
-        hasilpermutasi=(k-j)
-        list2.append(hasilpermutasi)
-        j+=1
-        if(k-j)==0:
-            break
+  return 2
 
-#Menghitung hasil
-def hasil(data):
-    r=1
-    for x in data:
-        r=r*x
-        return r
+faktorial = hitung_faktorial(n)
+print(f'{n}! = {faktorial}')
 
-#Hasil
-print(f'P({n},{k})={hasil(list1)}')
-print(f'P({n},{k})={hasil(list1)/hasil(list2)}')
+n = int(input('Masukkan jumlah buku : '))
+
+def hitung_faktorial (n):
+  if n > 2:
+    return n * hitung_faktorial(n - 1)
+
+  return 2
+
+faktorial = hitung_faktorial(n)
+print(f'{n}! = {faktorial}')
+
+n = int(input('Masukkan jumlah buku : '))
+
+def hitung_faktorial (n):
+  if n > 2:
+    return n * hitung_faktorial(n - 1)
+
+  return 2
+
+faktorial = hitung_faktorial(n)
+print(f'{n}! = {faktorial}')
+
+n = int(input('Masukkan jumlah buku : '))
+
+def hitung_faktorial (n):
+  if n > 2:
+    return n * hitung_faktorial(n - 1)
+
+  return 2
+
+faktorial = hitung_faktorial(n)
+print(f'{n}! = {faktorial}')
+
+n = int(input('Masukkan jumlah buku : '))
+
+def hitung_faktorial (n):
+  if n > 2:
+    return n * hitung_faktorial(n - 1)
+
+  return 2
+
+faktorial = hitung_faktorial(n)
+print(f'{n}! = {faktorial}')
+
+
+# fungsi perkalian
+def multiply(a,b,c,d,e):
+   return a * b * c * d * e
+
+num1 = int(input("Masukkan bilangan pertama : "))
+num2 = int(input("Masukkan bilangan kedua   : "))
+num3 = int(input("Masukkan bilangan ketiga  : "))
+num4 = int(input("Masukkan bilangan keempat : "))
+num5 = int(input("Masukkan bilangan kelima  : "))
+
+print(num1,"",num2,"",num3,"",num4,"",num5,"=", multiply(num1,num2,num3,num4,num5))
