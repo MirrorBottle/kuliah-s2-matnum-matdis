@@ -1,71 +1,21 @@
-#Rumus Faktorial 
-print('Program Menghitung Permutasi')
-n = int(input('Masukkan Total Semua Buku : '))
+import math
 
-def rumus_faktorial (n):
-  if n > 2:
-    return n * rumus_faktorial(n - 1)
+print('============================')
+print('SOAL 3B')
+print('============================')
 
-  return 2
+basis_data = int(input("Masukkan Total Buku Basis Data: "))
+metnum = int(input("Masukkan Total Buku Metode Numerik: "))
+alpro = int(input("Masukkan Total Buku Algoritma Pemrograman: "))
+jaringan = int(input("Masukkan Total Buku Jaringan: "))
 
-faktorial = rumus_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan Total Buku Basis Data : '))
-
-def rumus_faktorial (n):
-  if n > 2:
-    return n * rumus_faktorial(n - 1)
-
-  return 2
-
-faktorial = rumus_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan Total Buku Metode Numerik : '))
-
-def rumus_faktorial (n):
-  if n > 2:
-    return n * rumus_faktorial(n - 1)
-
-  return 2
-
-faktorial = rumus_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan Total Buku Algoritma Pemograman : '))
-
-def rumus_faktorial (n):
-  if n > 2:
-    return n * rumus_faktorial(n - 1)
-
-  return 2
-
-faktorial = rumus_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan Jumlah Buku Jaringan : '))
-
-def rumus_faktorial (n):
-  if n > 2:
-    return n * rumus_faktorial(n - 1)
-
-  return 2
-
-faktorial = rumus_faktorial(n)
-print(f'{n}! = {faktorial}')
+total_buku = basis_data + metnum + alpro + jaringan
+fact_total_buku = math.factorial(basis_data) * math.factorial(metnum) * math.factorial(alpro) * math.factorial(jaringan)
+total_kombinasi = math.factorial(total_buku) / fact_total_buku
+print(f"Total Kombinasi: {round(total_kombinasi)}")
 
 
-#Rumus Urutan Susunan Bebas
-def hasil(a,b,c,d,e):
-   return a / (b * c * d * e)
-   
-print('================Hasil==================')
-num1 = int(input("Masukkan Hasil Total Buku : "))
-num2 = int(input("Masukkan Hasil Basis Data   : "))
-num3 = int(input("Masukkan Hasil Metode Numerik  : "))
-num4 = int(input("Masukkan Hasil Algoritma Pemrograman : "))
-num5 = int(input("Masukkan Hasil Jaringan  : "))
 
-print('Hasil:')
-print(num1,"",num2,"",num3,"",num4,"",num5,"=", hasil(num1,num2,num3,num4,num5))
+
+
+

@@ -1,71 +1,20 @@
-#faktorial 
+import math
+
 print('============================')
-print('Program Menghitung Permutasi')
+print('SOAL 3A')
 print('============================')
-n = int(input('Masukkan jumlah semua buku : '))
 
-def hitung_faktorial (n):
-  if n > 2:
-    return n * hitung_faktorial(n - 1)
+basis_data = math.factorial(int(input("Masukkan Total Buku Basis Data: ")))
+metnum = math.factorial(int(input("Masukkan Total Buku Metode Numerik: ")))
+alpro = math.factorial(int(input("Masukkan Total Buku Algoritma Pemrograman: ")))
+jaringan = math.factorial(int(input("Masukkan Total Buku Jaringan: ")))
 
-  return 2
+total_kombinasi = basis_data * metnum * alpro * jaringan
 
-faktorial = hitung_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan jumlah buku : '))
-
-def hitung_faktorial (n):
-  if n > 2:
-    return n * hitung_faktorial(n - 1)
-
-  return 2
-
-faktorial = hitung_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan jumlah buku : '))
-
-def hitung_faktorial (n):
-  if n > 2:
-    return n * hitung_faktorial(n - 1)
-
-  return 2
-
-faktorial = hitung_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan jumlah buku : '))
-
-def hitung_faktorial (n):
-  if n > 2:
-    return n * hitung_faktorial(n - 1)
-
-  return 2
-
-faktorial = hitung_faktorial(n)
-print(f'{n}! = {faktorial}')
-
-n = int(input('Masukkan jumlah buku : '))
-
-def hitung_faktorial (n):
-  if n > 2:
-    return n * hitung_faktorial(n - 1)
-
-  return 2
-
-faktorial = hitung_faktorial(n)
-print(f'{n}! = {faktorial}')
+print(f"Total Kombinasi: {total_kombinasi}")
 
 
-# fungsi perkalian
-def multiply(a,b,c,d,e):
-   return a * b * c * d * e
 
-num1 = int(input("Masukkan bilangan pertama : "))
-num2 = int(input("Masukkan bilangan kedua   : "))
-num3 = int(input("Masukkan bilangan ketiga  : "))
-num4 = int(input("Masukkan bilangan keempat : "))
-num5 = int(input("Masukkan bilangan kelima  : "))
 
-print(num1,"",num2,"",num3,"",num4,"",num5,"=", multiply(num1,num2,num3,num4,num5))
+
+

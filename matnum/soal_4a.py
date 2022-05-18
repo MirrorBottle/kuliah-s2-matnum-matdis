@@ -26,34 +26,23 @@ diketahui = {
 }
 print ("diketahui pada soal")
 tabel(diketahui)
-print ("iterasi akan berhenti ketika sudah mencapai iterasi maksimum atau fx lebih dari 0 atau eror\n")
+print ("iterasi akan berhenti ketika sudah mencapai iterasi maksimum atau fx lebih dari 0 atau error\n")
 #n=int(input("jumlah iterasi : "))
 n=15
 i=0
-while  i < n  and abs(x1-x0 )>=tol : 
-    
-    
+
+steps = []
+while i < n and abs(x1-x0 )>= tol: 
     x=(x1+x0)/2
     fx=x**2-2*x-2
     fx0=x0**2-2*x0-2
     fx1=x1**2-2*x1-2 
-    print ("iterasi :",i)
-    print ("==========")
-    print ("x0 :",x0, " \t\t\tfx0 :",fx0)
-    print ("x1 :",x1, " \t\t\tfx1 :",fx1)
-    print ("x  :",x, "\t\t\tfx :",fx)
-    print ("eror : ",abs(x1-x0))
-    print ("~~~~~~~~~~~~~~~\n")
+
+    steps.append([i + 1, x0, x1, x, fx0, fx1, fx, abs(x1-x0)])
     i=i+1 
     if fx0 and fx<0 :
         x0=x
     elif fx0 and fx>0:
         x1=x
 
-nama = ["Muhammad rahman"]
-nim  = [2109106016]
-saya ={
-    "nama" : nama,
-    "NIM"  : nim,
-}
-tabel (saya)
+print(tabulate(steps, headers=["Iterasi", "x0", "x1", "x", "fx0", "fx1", "fx", "e"], tablefmt='fancy_grid'))

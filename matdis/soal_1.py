@@ -1,8 +1,3 @@
-def main(a, b):
-    gcd = cari_pbb(a,b, True)
-    print("PBB(%d, %d) = %d" % (a,b,gcd))
-    
-
 def cari_pbb(a,b, denganLangkah = False):
     """
     Mencari PBB menggunakan Algoritma Eucledian
@@ -29,7 +24,8 @@ def cari_pbb(a,b, denganLangkah = False):
 
     jumlah_persamaan = []
     while (a % b != 0):
-        q,r = a//b, a%b
+        q = a//b
+        r = a%b
         jumlah_persamaan.append(q)
         if denganLangkah:
             print("%d = %d(%d) + %d" % (a,b,q,r))
@@ -42,8 +38,12 @@ def cari_pbb(a,b, denganLangkah = False):
         
     return r
 
+def main(a, b):
+    pbb = cari_pbb(a,b, True)
+    print("PBB(%d, %d) = %d" % (a,b,pbb))
+    
 
-if __name__ == '__main__':
-    a = 1242
-    b = 1986
-    main(a, b)
+
+a = 1242
+b = 1986
+main(a, b)
