@@ -40,7 +40,7 @@ x2 = P[1][0]
 y2 = P[1][1]
 x3 = P[2][0]
 y3 = P[2][1]
-y = y1*(x-x2)*(x-x3) / (x1-x2)*(x1-x3) + y2*(x-x1)*(x-x3) / (x2-x1)*(x2-x3) + y3*(x-x1)*(x-x2) / (x3-x1)*(x3-x2)
+y = (y1*(x-x2)*(x-x3)) / ((x1-x2)*(x1-x3)) + (y2*(x-x1)*(x-x3)) / ((x2-x1)*(x2-x3)) + (y3*(x-x1)*(x-x2)) / ((x3-x1)*(x3-x2))
 
 #Penerapan Grafik Kordinat
 x_axis = [x1, x2, x3, x]
